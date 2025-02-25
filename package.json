@@ -1,17 +1,24 @@
 {
   "name": "najiz-system",
   "version": "1.0.0",
-  "description": "نظام إدارة الطلبات",
+  "description": "نظام إدارة الطلبات - ناجز",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js", // لتشغيل الخادم تلقائيًا
+    "dev": "nodemon app.js", // للتطوير المحلي (اختياري)
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "mysql2": "^2.3.3",
-    "sequelize": "^6.6.5",
-    "multer": "^1.4.2",
-    "bcryptjs": "^2.4.3",
-    "jsonwebtoken": "^8.5.1"
+    "express": "^4.17.1", // لإدارة الخادم
+    "mysql2": "^2.3.3", // للاتصال بقاعدة البيانات MySQL
+    "sequelize": "^6.6.5", // لإدارة قواعد البيانات
+    "multer": "^1.4.2", // لرفع الملفات
+    "bcryptjs": "^2.4.3", // لتشفير كلمات المرور
+    "jsonwebtoken": "^8.5.1", // لإدارة الجلسات
+    "body-parser": "^1.19.0", // لتحليل طلبات HTTP
+    "nodemon": "^2.0.15" // للتطوير المحلي (اختياري)
+  },
+  "engines": {
+    "node": "16.x" // إصدار Node.js المطلوب
   }
 }
